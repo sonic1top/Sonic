@@ -1,54 +1,104 @@
---TS7 was here.
--- ////////////
-game:GetService("ReplicatedStorage").RE["1RPNam1eTex1t"]:FireServer("RolePlayName", "-سڪـربـت الـمـطور خليفه V0.3-")
-wait(0.5)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "هسه رح يفتح يمك";
-    Text = "☑️⚜️سكربت المطور سونيك⚜️☑️"; -- ARAB TEAM
-    Duration = 5;
-})
-local args = {
-    [1] = "RolePlayBio",
-    [2] = "🦅 سكربت المطور سونيك 🦅"
-}
-
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/speedwave1/speed_wave/refs/heads/main/i2att")))()
-
-MakeWindow({
-  Hub = {
-    Title = "سونيك | HUB",
-    Animation = "🌀جار التشغيل الواجهة🌀"
-  },
-  Key = {
-    KeySystem = false,
-    Title = "Key System",
-    Description = "",
-    KeyLink = "",
-    Keys = {"1234"},
-    Notifi = {
-      Notifications = true,
-      CorrectKey = "Running the Script...",
-      Incorrectkey = "The key is incorrect",
-      CopyKeyLink = "Copied to Clipboard"
+shared.LoaderTitle = "جارٍ تحميل سكربت المطور سونيك";
+shared.LoaderKeyFrames = {
+    [1] = {
+        1,
+        20
+    },
+    [2] = {
+        2,
+        50
+    },
+    [3] = {
+        3,
+        80
+    },
+    [4] = {
+        2,
+        100
     }
-  }
-})
+};
+local v2 = {
+    LoaderData = {
+        Name = shared.LoaderTitle or "A Loader",
+        Colors = shared.LoaderColors or {
+            Main = Color3.fromRGB(0, 0, 0),
+            Topic = Color3.fromRGB(7, 167, 0),
+            Title = Color3.fromRGB(7, 167, 0),
+            LoaderBackground = Color3.fromRGB(255, 255, 255),
+            LoaderSplash = Color3.fromRGB(150, 0, 0)
+        }
+    },
+    Keyframes = shared.LoaderKeyFrames or {
+        [1] = {
+            1,
+            10
+        },
+        [2] = {
+            2,
+            30
+        },
+        [3] = {
+            3,
+            60
+        },
+        [4] = {
+            2,
+            100
+        }
+    }
+};
+local v3 = {
+    [1] = "",
+    [2] = "",
+    [3] = "",
+    [4] = ""
+};
+function TweenObject(v178, v179, v180)
+    game.TweenService:Create(v178, TweenInfo.new(v179, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), v180):Play();
+end
+function CreateObject(v181, v182)
+    local v183 = Instance.new(v181);
+    local v184;
+    for v416, v417 in pairs(v182) do
+        if (v416 ~= "Parent") then
+            v183[v416] = v417;
+        else
+            v184 = v417;
+        end
+    end
+    v183.Parent = v184;
+    return v183;
+end
+local function v4(v186, v187)
+    local v188 = Instance.new("UICorner");
+    v188.CornerRadius = UDim.new(0, v186);
+    v188.Parent = v187;
+end
+local v5 = CreateObject("ScreenGui", {
+    Name = "Core",
+    Parent = game.CoreGui
+});
+local v6 = CreateObject("Frame", {
+    Name = "Main",
+    Parent = v5,
+    BackgroundColor3 = v2.LoaderData.Colors.Main,
+    BorderSizePixel = 0,
+    ClipsDescendants = true,
+    Position = UDim2.new(0.5, 0, 0.5, 0),
+    AnchorPoint = Vector2.new(0.5, 0.5),
+    Size = UDim2.new(0, 0, 0, 0)
+});
+v4(12, v6);
+local v7 = CreateObject("ImageLabel", {
+    Name = "UserImage",
+    Parent = v6,
+    BackgroundTransparency = 1,
+    Image = "rbxassetid://95595481924491",
+    Position = UDim2.new(0, 15, 0, 10),
+    Size = UDim2.new(0, 55, 0, 55)
+});
+v4(25, v7);
 
-MinimizeButton({
-  Image = "rbxassetid://115881843808544",
-  Size = {50, 50},
-  Color = Color3.fromRGB(255, 125, 0),
-  Corner = true,
-  Stroke = false,
-  StrokeColor = Color3.fromRGB(0, 0, 139)
-})
-
-local messages = {
-    "منورين سكربتي",
-    "السكربت الاساسي",
-    "سيتفعل بعد كم ثواني",
-    "لازم ريسيت للأحتياط"
-}
 
 local function showNotification(text, imageId)
     local frame = Instance.new("Frame")
@@ -130,7 +180,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/mhmdsx/ui-TKX/refs/h
 
 MakeWindow({
   Hub = {
-    Title = "v0.3 خليفه تحديث |brookhaven",
+    Title = "v0.3 سونيك  تحديث |brookhaven",
     Animation = "brookhaven"
   },
   Key = {
@@ -159,10 +209,10 @@ MinimizeButton({
 
 local Main = MakeTab({Name = "🦅 حقوق المطور 🦅"})
 local Image = AddImageLabel(Main, {
-  Name = "خليفه | HUB",
+  Name = "سونيك  | HUB",
   Image = "rbxassetid://115881843808544"
 })
-AddParagraph(Main, {"هنا كل قنوات المطور خليفه"})
+AddParagraph(Main, {"هنا كل قنوات المطور سونيك "})
 AddButton(Main, {
   Name = "انسخ قناة تيك توك ",
   Callback = function()
@@ -175,8 +225,8 @@ AddButton(Main, {
     setclipboard('Nemrxxx3')
   end
 })
-AddParagraph(Main, {"فريق المطور خليفه اج ار هم الافضل"})
-AddParagraph(Main, {"سكربت المطور خليفه"})
+AddParagraph(Main, {"فريق المطور سونيك  اج ار هم الافضل"})
+AddParagraph(Main, {"سكربت المطور سونيك "})
 local Label = AddTextLabel(Main, "السيرفر")
 -- Create a label to show the number of players
 local playerCountLabel = AddTextLabel(Main, "الاعبين في السيرفر: " .. #game.Players:GetPlayers())
@@ -1175,7 +1225,7 @@ loadstring(_G.boomboxb.Server.Source)()
 wait(0.1)
 game.StarterGui:SetCore("SendNotification", {
    Title = "امر جديد تحديث 0.3";
-  Text = "مطور خليفه";
+  Text = "مطور سونيك ";
   Icon = "rbxassetid://115881843808544";
   Duration = 5;
 })
@@ -1188,7 +1238,7 @@ AddButton(Main, {
     wait(0.1)
 game.StarterGui:SetCore("SendNotification", {
    Title = "امر جديد تحديث 0.3";
-  Text = "مطور خليفه";
+  Text = "مطور سونيك ";
   Icon = "rbxassetid://115881843808544";
   Duration = 5;
 })
@@ -1200,12 +1250,12 @@ AddButton(Main, {
     local NothingLibrary = loadstring(game:HttpGetAsync('https://qu.ax/hsYzw.txt'))()
 local Notification = NothingLibrary.Notification();
 Notification.new({
-	Description = 'حقوق سكربت  خليفه سكربت';
-	Title = "خليفه | FLY";
+	Description = 'حقوق سكربت  سونيك  سكربت';
+	Title = "سونيك  | FLY";
 	Duration = 7;
 	Icon = "rbxassetid://115881843808544",
 })
-local Script_Title = "خليفه | FLY"
+local Script_Title = "سونيك  | FLY"
 local Arceus = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -6680,7 +6730,7 @@ tool = Instance.new("Tool")
 
 tool.RequiresHandle = false
 
-tool.Name = "🦅 اداة تنقل من صصنع خليفه🦅"
+tool.Name = "🦅 اداة تنقل من صصنع سونيك 🦅"
 
 tool.Activated:connect(function()
 
@@ -7091,11 +7141,11 @@ game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServ
 })
 local Main = MakeTab({Name = "البايو"})
 AddButton(Main, {
-  Name = "خليفه HUB",
+  Name = "سونيك  HUB",
   Callback = function()
     local args = {
     [1] = "RolePlayBio",
-    [2] = "خليفه HUB"
+    [2] = "سونيك  HUB"
 }
 
 game:GetService("ReplicatedStorage").RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(args))
