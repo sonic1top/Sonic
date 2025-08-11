@@ -35,9 +35,9 @@ MakeWindow({
 })
 
 MinimizeButton({
-  Image = "rbxassetid://115881843808544",
+  Image = "rbxassetid://114366834864396",
   Size = {50, 50},
-  Color = Color3.fromRGB(255, 125, 0),
+  Color = Color3.fromRGB(139, 0, 0),
   Corner = true,
   Stroke = false,
   StrokeColor = Color3.fromRGB(0, 0, 139)
@@ -45,7 +45,7 @@ MinimizeButton({
 
 local Main = MakeTab({Name = "معلومات السكربت"})
 AddImageLabel(Main, {
-  Name = "تم تطوير السكربت بواسطة Trunks",
+  Name = "تم تطوير السكربت بواسطة SONIC",
   Image = "rbxassetid://95595481924491"
 })
 AddSection(Main, {"روابط التليجرام"})
@@ -88,7 +88,7 @@ AddButton(Main, {
   end
 })
 AddButton(Main, {
-  Name = "يوزر صديقي ترولكس",
+  Name = "يوزر صديقي سونيك",
   Callback = function()
     setclipboard('john213iej')
   end
@@ -112,14 +112,7 @@ AddButton(Main, {
   end
 })
 
-local Main = MakeTab({"اغاني واصوات مزعجه", "cherry"})
-AddButton({"اصوات مزعجه", function(Value)
-print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/brookhaven-script/main/brookhaven%20script.lua"))()
-end})
 
-AddButton({"اغاني اضع كودك", function(Value)
-print("Hello World!")loadstring(game:HttpGet(("https://raw.githubusercontent.com/MirayXS/Aux/main/Pineapple.lua"), true))()
-end})
 
 
 AddParagraph(Main, {"فريق المطور سونيك  اج ار هم الافضل"})
@@ -1194,7 +1187,7 @@ local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
-Arceus.Name = "TRUNKS"
+Arceus.Name = "SONIC"
 Arceus.Enabled = true
 Arceus.ResetOnSpawn = true
 Arceus.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -6807,6 +6800,22 @@ Name = "🦅 مكان المولدة 🦅",
     Callback = teleportToAgency
 })
 local Main = MakeTab({Name = "🦅 السكربتات 🦅"})
+
+AddButton(Main, {
+  Name = "🦅 اغاني مزعجه 🦅",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/brookhaven-script/main/brookhaven%20script.lua"))()
+end
+})
+
+AddButton(Main, {
+  Name = "🦅 ضع كودك 🦅",
+  Callback = function()
+  loadstring(game:HttpGet(("https://raw.githubusercontent.com/MirayXS/Aux/main/Pineapple.lua"), true))()
+end
+})
+
+
 AddButton(Main, {
   Name = "🦅 سكربت الجودة 🦅",
   Callback = function()
