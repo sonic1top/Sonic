@@ -111,6 +111,17 @@ AddButton(Main, {
     setclipboard('Nemrxxx3')
   end
 })
+
+local Main = MakeTab({"اغاني واصوات مزعجه", "cherry"})
+AddButton({"اصوات مزعجه", function(Value)
+print("Hello World!")loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/brookhaven-script/main/brookhaven%20script.lua"))()
+end})
+
+AddButton({"اغاني اضع كودك", function(Value)
+print("Hello World!")loadstring(game:HttpGet(("https://raw.githubusercontent.com/MirayXS/Aux/main/Pineapple.lua"), true))()
+end})
+
+
 AddParagraph(Main, {"فريق المطور سونيك  اج ار هم الافضل"})
 AddParagraph(Main, {"سكربت المطور سونيك "})
 local Label = AddTextLabel(Main, "السيرفر")
