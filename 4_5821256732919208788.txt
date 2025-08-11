@@ -9,7 +9,7 @@ game.StarterGui:SetCore("SendNotification", {
 })
 local args = {
     [1] = "RolePlayBio",
-    [2] = "🦅 سكربت المطور سونيك 🦅"
+    [2] = "❌ سكربت المطور sonic ❌"
 }
 
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/speedwave1/speed_wave/refs/heads/main/i2att")))()
